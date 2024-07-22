@@ -4,13 +4,12 @@ from pynput.mouse import Controller, Button
 from time import sleep
 from pynput.keyboard import KeyCode,Listener
 import tkinter as tk  
+import pyscreeze
+
+pyscreeze.USE_IMAGE_NOT_FOUND_EXCEPTION = False
 
 delay=0.5
 mouse=Controller()
-
-res = pyautogui.locateOnScreen("image.png")
-print(res)
-pyautogui.moveTo(res)
 
 class AutoClicker(Thread):
     clicking = False
